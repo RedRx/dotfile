@@ -1,0 +1,162 @@
+[
+  {
+    "key": "alt+o",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "alt+shift+o",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+shift+alt+n",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "alt+shift+o",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible && editorTextFocus && vim.active && vim.mode == 'Insert'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible && editorTextFocus && vim.active && vim.mode == 'Insert'"
+  },
+  {
+    "key": ";",
+    "command": "vim.remap",
+    "when": "editorTextFocus && vim.mode == 'Normal'",
+    "args": {
+      "after": [":"]
+    }
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "shift+alt+5",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+alt+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "alt+f11",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+
+  {
+    "key": "ctrl+alt+enter",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+
+  {
+    "key": "alt+1",
+    "command": "workbench.action.openEditorAtIndex1",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+2",
+    "command": "workbench.action.openEditorAtIndex2",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+3",
+    "command": "workbench.action.openEditorAtIndex3",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+4",
+    "command": "workbench.action.openEditorAtIndex4",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+5",
+    "command": "workbench.action.openEditorAtIndex5",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+6",
+    "command": "workbench.action.openEditorAtIndex6",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+7",
+    "command": "workbench.action.openEditorAtIndex7",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+8",
+    "command": "workbench.action.openEditorAtIndex8",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+9",
+    "command": "workbench.action.openEditorAtIndex9",
+    "when": "editorTextFocus"
+  }
+]
