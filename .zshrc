@@ -566,9 +566,9 @@ alias dkara='sudo rm -rf ~/dotfile/.config/karabiner'
 alias dgh='sudo rm -rf ~/dotfile/.config/gh'
 alias diterm='sudo rm -rf ~/dotfile/.config/iterm2'
 alias bkneofetchcustom='sudo cp -rvf ~/neofetch-custom.txt ~/dotfile && echo "\033[1;36m **neofetch-custom.txt copy success\033[0m"'
-alias afterdone='sudo cd ~/dotfile && gs && sudo git add . && gc && gp && home && clr && echo -e DOTFILE STORE SUCCESS'
+alias afterdone='cd ~/dotfile && gs && sudo git add . && sudo git commit && sudo git push && home && clr && echo -e DOTFILE STORE SUCCESS'
 alias store-iterm2-all-config='sudo cp ~/Library/Preferences/com.googlecode.iterm2.plist ~/dotfile && echo "\033[1;36m **com.googlecode.iterm2.plist copy success\033[0m"'
-alias restore-iterm2-config='sudo cp ~/dotfile/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'
+alias restore-iterm2-config='cp ~/dotfile/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'
 
 # Combined alias to run all backup commands with a 1-second pause between each and print completion message in orange
 alias store-dotfile='home; dlconfigfirst && sleep 1 && bkconfig && sleep 1 && bkp10 && sleep 1 && bktmux && sleep 1 && bkzsh && sleep 1 && dkara && sleep 1 && dgh && sleep 1 && diterm && sleep 1 && bkneofetchcustom && sleep 1 && store-iterm2-all-config && sleep 1 && echo -e "\033[38;2;255;215;0mALL SCRIPT BACKUP IS DONE, Please commit state\033[0m" && sleep 2 && afterdone'
