@@ -1,4 +1,4 @@
-local prefix = "<leader>g"
+local prefix = "<leader>gg"
 return {
   "almo7aya/openingh.nvim",
   cmd = { "OpenInGHRepo", "OpenInGHFile", "OpenInGHFileLines" },

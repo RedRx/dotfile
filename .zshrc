@@ -557,17 +557,17 @@ bindkey '^[[B' history-search-forward
 # ╭──────────────────────────────────────────────────────────╮
 # │ dotfile backup                                           │
 # ╰──────────────────────────────────────────────────────────╯
-alias dlconfigfirst='sudo rm -rf ~/dotfile/.config'
-alias bkconfig='sudo cp -rvf ~/.config ~/dotfile && echo "\033[1;36m **.config copy success\033[0m"'
-alias bkp10='sudo cp -rvf ~/.p10k.zsh ~/dotfile && echo "\033[1;36m **.p10k.zsh copy success\033[0m"'
-alias bktmux='sudo cp -rvf ~/.tmux.conf ~/dotfile && echo "\033[1;36m **.tmux.conf copy success\033[0m"'
-alias bkzsh='sudo cp -rvf ~/.zshrc ~/dotfile && echo "\033[1;36m **.zshrc copy success\033[0m"'
-alias dkara='sudo rm -rf ~/dotfile/.config/karabiner'
-alias dgh='sudo rm -rf ~/dotfile/.config/gh'
-alias diterm='sudo rm -rf ~/dotfile/.config/iterm2'
-alias bkneofetchcustom='sudo cp -rvf ~/neofetch-custom.txt ~/dotfile && echo "\033[1;36m **neofetch-custom.txt copy success\033[0m"'
-alias afterdone='cd ~/dotfile && gs && sudo git add . && sudo git commit && sudo git push && home && clr && echo -e DOTFILE STORE SUCCESS'
-alias store-iterm2-all-config='sudo cp ~/Library/Preferences/com.googlecode.iterm2.plist ~/dotfile && echo "\033[1;36m **com.googlecode.iterm2.plist copy success\033[0m"'
+alias dlconfigfirst='rm -rf ~/dotfile/.config'
+alias bkconfig='cp -rvf ~/.config ~/dotfile && echo "\033[1;36m **.config copy success\033[0m"'
+alias bkp10='cp -rvf ~/.p10k.zsh ~/dotfile && echo "\033[1;36m **.p10k.zsh copy success\033[0m"'
+alias bktmux='cp -rvf ~/.tmux.conf ~/dotfile && echo "\033[1;36m **.tmux.conf copy success\033[0m"'
+alias bkzsh='cp -rvf ~/.zshrc ~/dotfile && echo "\033[1;36m **.zshrc copy success\033[0m"'
+alias dkara='rm -rf ~/dotfile/.config/karabiner'
+alias dgh='rm -rf ~/dotfile/.config/gh'
+alias diterm='rm -rf ~/dotfile/.config/iterm2'
+alias bkneofetchcustom='cp -rvf ~/neofetch-custom.txt ~/dotfile && echo "\033[1;36m **neofetch-custom.txt copy success\033[0m"'
+alias afterdone='cd ~/dotfile && gs && gaa && gc && gp && home && clr && echo -e DOTFILE STORE SUCCESS'
+alias store-iterm2-all-config='cp ~/Library/Preferences/com.googlecode.iterm2.plist ~/dotfile && echo "\033[1;36m **com.googlecode.iterm2.plist copy success\033[0m"'
 alias restore-iterm2-config='cp ~/dotfile/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'
 
 # Combined alias to run all backup commands with a 1-second pause between each and print completion message in orange

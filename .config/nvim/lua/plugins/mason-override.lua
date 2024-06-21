@@ -91,6 +91,8 @@ return {
       "markdown-oxide",
       -- "jdtls",
       "gopls",
+      "bash-language-server",
+      "java-debug-adapter",
     },
     cmd = {
       "Mason",

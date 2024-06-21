@@ -133,30 +133,6 @@ keymap.set({ "n", "v" }, "gm", function()
   Util.format({ force = true })
 end, { desc = "Format" })
 
--- vim.keymap.set("n", "<leader>fz", "<cmd>Telescope zoxide list<cr>", { desc = "Find directories with zoxide" })
---
--- vim.keymap.set("n", "<leader>zP", "<cmd>PickColor<cr>", { desc = "Pick RGBA Color" })
--- vim.keymap.set("n", "<leader>zh", "<cmd>ConvertHEXandRGB<cr>", { desc = "ConvertHEXandRGB" })
--- vim.keymap.set("n", "<leader>zH", "<cmd>ConvertHEXandHSL<cr>", { desc = "ConvertHEXandHSL" })
-
--- require("color-picker").setup({ -- for changing icons & mappings
---   ["icons"] = { "ﱢ", "" },
---   -- ["icons"] = { "ﮊ", "" },
---   -- ["icons"] = { "", "ﰕ" },
---   -- ["icons"] = { "", "" },
---   -- ["icons"] = { "", "" },
---   -- ["icons"] = { "ﱢ", "" },
---   ["border"] = "rounded", -- none | single | double | rounded | solid | shadow
---   ["keymap"] = { -- mapping example:
---     ["U"] = "<Plug>ColorPickerSlider5Decrease",
---     ["O"] = "<Plug>ColorPickerSlider5Increase",
---   },
---   ["background_highlight_group"] = "Normal", -- default
---   ["border_highlight_group"] = "FloatBorder", -- default
---   ["text_highlight_group"] = "Normal", --default
--- })
--- vim.cmd([[hi FloatBorder guibg=NONE]]) -- if you don't want weird border background colors around the popup.
-
 -- ╭─────────────────────────────────────────────────────────╮
 -- │ keymap of dial-nvim from LazyExtras                     │
 -- ╰─────────────────────────────────────────────────────────╯
