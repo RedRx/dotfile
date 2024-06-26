@@ -493,17 +493,18 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 create_docker_postgresql() {
   local container_name=$1
   local password=$2
+  local db_name=$3
 
-  if [ -z "$container_name" ] || [ -z "$password" ]; then
-    echo -e "\033[1m\033[1;31mError: \033[0m\033[0m\033[1m\033[38;2;255;215;0mUsage-> \033[0m\033[0mcreate_docker_postgresql <container_name> <password>"
+  if [ -z "$container_name" ] || [ -z "$password" ] || [ -z "$db_name" ]; then
+    echo -e "\033[1m\033[1;31mError: \033[0m\033[0m\033[1m\033[38;2;255;215;0mUsage-> \033[0m\033[0mcreate_docker_postgresql <container_name> <password> <db_name>"
     return 1
   fi
 
-  docker run --name "$container_name" -e POSTGRES_PASSWORD="$password" -d -p 5432:5432 postgres
+  docker run --name "$container_name" -e POSTGRES_PASSWORD="$password" -e POSTGRES_DB="$db_name" -d -p 5432:5432 postgres
 }
 
 alias create-docker-postgresql=create_docker_postgresql
-# $ create-docker-postgresql my_container my_password
+# create_docker_postgresql my_container my_password my_database
 
 # bun completions
 [ -s "/Users/bearydevtoylab/.bun/_bun" ] && source "/Users/bearydevtoylab/.bun/_bun"
@@ -623,7 +624,7 @@ show_info_random() {
 alias showinfo='show_info'
 alias showinforandom='show_info_random'
 alias c='cls'
-alias ex='exit'
+alias exit='echo "Can not use exit command that effect with tmux session"'
 
 c
 
