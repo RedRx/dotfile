@@ -624,7 +624,7 @@ show_info_random() {
 alias showinfo='show_info'
 alias showinforandom='show_info_random'
 alias c='cls'
-alias exit='echo "Can not use exit command that effect with tmux session"'
+# alias exit='echo "Can not use exit command that effect with tmux session"'
 
 c
 
