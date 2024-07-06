@@ -29,4 +29,5 @@ return {
       hint_bg = "#147828",
     },
   },
+  enabled = false,
 }
