@@ -280,6 +280,7 @@ alias fpson='/bin/launchctl setenv MTL_HUD_ENABLED 1 && echo "Metal Performance 
 alias fpsoff='/bin/launchctl setenv MTL_HUD_ENABLED 0 && echo "Metal Performance HUD OFF"'
 
 alias getlocalip='ipconfig getifaddr en0'
+alias getip='ipconfig getifaddr en0'
 alias hollywoodapp='cls; docker run --rm -it bcbcarl/hollywood'
 
 killport() {
