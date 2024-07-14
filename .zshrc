@@ -124,7 +124,7 @@ alias clr='clear'
 # alias clr='clear; neofetch --source ~/neofetch-custom.txt'
 alias dl='home; cd Downloads'
 # alias cls='clear; showinfo'
-alias cls='clear; showinforandom;'
+alias cls='clear; neofetch; showinforandom;'
 alias zshrc='vim ~/.zshrc'
 alias zshreload='source ~/.zshrc'
 alias reloadzsh='source ~/.zshrc'
@@ -573,13 +573,13 @@ alias store-iterm2-all-config='cp ~/Library/Preferences/com.googlecode.iterm2.pl
 alias restore-iterm2-config='cp ~/dotfile/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'
 
 # Combined alias to run all backup commands with a 1-second pause between each and print completion message in orange
-alias store-dotfile='home; dlconfigfirst && sleep 1 && bkconfig && sleep 1 && bkp10 && sleep 1 && bktmux && sleep 1 && bkzsh && sleep 1 && dkara && sleep 1 && dgh && sleep 1 && diterm && sleep 1 && bkneofetchcustom && sleep 1 && store-iterm2-all-config && sleep 1 && echo -e "\033[38;2;255;215;0mALL SCRIPT BACKUP IS DONE, Please commit state\033[0m" && sleep 2 && afterdone'
+alias storeDotfile='home; dlconfigfirst && sleep 1 && bkconfig && sleep 1 && bkp10 && sleep 1 && bktmux && sleep 1 && bkzsh && sleep 1 && dkara && sleep 1 && dgh && sleep 1 && diterm && sleep 1 && bkneofetchcustom && sleep 1 && store-iterm2-all-config && sleep 1 && echo -e "\033[38;2;255;215;0mALL SCRIPT BACKUP IS DONE, Please commit state\033[0m" && sleep 2 && afterdone'
 alias dotfile='cd ~/dotfile/'
 
 # alias minfo='echo -e "\033[38;2;255;215;0m🅷 🅸  🅱 🅴 🅰 🆁 🆈 , \033[38;2;148;0;211m🅷 🅰 🅿 🅿 🆈  🅲 🅾 🅳 🅸 🅽 🅶 \033[0m"' # Normal font
 alias minfo='echo -e "\033[1;31m🅷 🅸 \033[0m \033[1;38;2;255;215;0m🅱 🅴 🅰 🆁 🆈 , \033[38;2;255;105;180m🅷 🅰 🅿 🅿 🆈 \033[0m \033[1;38;2;148;0;211m🅲 🅾 🅳 🅸 🅽 🅶 .\033[0m"' # Bold font
 
-show_info() {
+function show_info() {
   echo -e ""
   echo -e "  \033[1m \033[1;36m🅲 🅾 🅼 🅿 🅰 🅽 🆈 : \033[0m \033[1m\033[38;2;255;215;0m🆃 🅾 🆈 🅻 🅰 🅱  🅲 🅾 .,🅻 🆃 🅳 .\033[0m\033[0m"
   echo -e "  \033[1m \033[1;31m🅳 🅴 🆅 🅴 🅻 🅾 🅿 🅴 🆁 : \033[0m \033[1m\033[1;36m🆃 🅴 🅴 🆁 🅰 🅿 🅰 🆃 \033[0m \033[1;32m🆆 🅰 🆂 🆂 🅰 🆅 🅰 🅽 🅸 🅲 🅷 \033[0m \033[1m\033[38;5;244m(🅱 🅴 🅰 🆁 🆈 )\033[0m \033[0m "
@@ -591,7 +591,7 @@ show_info() {
   echo -e ""
 }
 
-show_info_random() {
+function show_info_random() {
   # Generate random colors avoiding color code 0 (black)
   company_color=$((1 + $RANDOM % 255))
   company2_color=$((1 + $RANDOM % 255))
