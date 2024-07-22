@@ -23,10 +23,6 @@ hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_ex
 
 return {
   {
-    "echasnovski/mini.indentscope",
-    enabled = false,
-  },
-  {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     dependencies = { "HiPhish/rainbow-delimiters.nvim" },
@@ -52,21 +48,17 @@ return {
         scope = { enabled = false },
         indent = {
           highlight = highlight,
-          char = "▏",
+          -- char = "▏",
+          -- char = "╎",
+          char = "┃",
+        },
+        whitespace = {
+          -- remove_blankline_trail = true,
+        },
+        exclude = {
+          filetypes = { "help", "alpha", "dashboard", "Trouble", "lazy", "neo-tree" },
         },
       })
     end,
-  },
-  {
-    "HiPhish/rainbow-delimiters.nvim",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    event = "VeryLazy",
-    main = "rainbow-delimiters.setup",
-  },
-  {
-    "catppuccin",
-    optional = true,
-    ---@type CatppuccinOptions
-    opts = { integrations = { rainbow_delimiters = true } },
   },
 }
