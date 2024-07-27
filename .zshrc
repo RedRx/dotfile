@@ -31,6 +31,15 @@ export PATH=/usr/local/share/npm/bin:$PATH
 alias npmgloballist='npm list -g --depth=0'
 
 # ╭──────────────────────────────────────────────────────────╮
+# │ Check update of all dependencies in project              │
+# ╰──────────────────────────────────────────────────────────╯
+# $ npm install -g npm-check-updates
+# $ ncu -u
+# Or
+# $ npx npm-check-updates -u
+# $ bun install
+
+# ╭──────────────────────────────────────────────────────────╮
 # │ YARN                                                     │
 # ╰──────────────────────────────────────────────────────────╯
 alias yarngloballist='yarn global list'
