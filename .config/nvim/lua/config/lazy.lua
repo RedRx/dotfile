@@ -15,10 +15,10 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         colorscheme = "solarized-osaka",
-        -- news = {
-        --   lazyvim = true,
-        --   neovim = true,
-        -- },
+        news = {
+          lazyvim = true,
+          neovim = true,
+        },
       },
     },
 
@@ -56,6 +56,38 @@ require("lazy").setup({
           end,
         })
       end,
+    },
+
+    -- ╭─────────────────────────────────────────────────────────╮
+    -- │ Neo-tree override                                       │
+    -- ╰─────────────────────────────────────────────────────────╯
+    {
+      {
+        "nvim-neo-tree/neo-tree.nvim",
+        config = function()
+          -- Set up key mappings for default and float styles
+          vim.api.nvim_set_keymap("n", "<leader>E", ":Neotree reveal<CR>", { noremap = true, silent = true })
+          vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree float<CR>", { noremap = true, silent = true })
+        end,
+        opts = function(_, opts)
+          local defaults = opts
+
+          -- Modify the defaults to auto close when a file is opened
+          defaults.event_handlers = {
+            {
+              event = "file_opened",
+              handler = function()
+                require("neo-tree").close_all()
+              end,
+            },
+          }
+
+          -- Set the position to float style
+          -- defaults.window.position = "float"
+
+          return defaults
+        end,
+      },
     },
 
     -- import/override with your plugins
