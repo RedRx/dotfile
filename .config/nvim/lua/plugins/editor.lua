@@ -125,7 +125,8 @@ return {
       {
         -- ";s",
         -- "<leader>fs",
-        "--",
+        -- "--",
+        "<leader>-",
         function()
           local builtin = require("telescope.builtin")
           builtin.treesitter()
