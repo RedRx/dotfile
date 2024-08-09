@@ -1273,6 +1273,13 @@ alias c='cls'
 alias r='clr'
 alias ex='exit'
 
+# ╭──────────────────────────────────────────────────────────╮
+# │ Android Platform Tools                                   │
+# ╰──────────────────────────────────────────────────────────╯
+alias adbcheckbattery='cd ~/Downloads/platform-tools/ && ./adb shell dumpsys battery'
+# mSavedBatteryAsoc => This is battery health percentage
+
+
 c
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
